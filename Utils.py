@@ -11,6 +11,7 @@ from time import time
 import numpy as np
 #import pandas as pd
 
+from sklearn.metrics import confusion_matrix
 
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
@@ -240,5 +241,37 @@ def plot_whiky_body_correlation(whisky_dataframe):
 
     plt.show()
 
+def print_cm(cm):
+    print("{0:10} |  {1:10} | {2:10} ".format("        ", "No Tobacco", "Tobacco"))
+    print("{0:10} |  {1:5}      | {2:5} ".format("No Tobacco", cm[0,0], cm[0,1]))
+    print("{0:10} |  {1:5}      | {2:5} ".format("Tobacco", cm[1,0], cm[1,1]))
+
+
+def plot_1d_random_data(ratio=0.5, n=30):
+    random_data = np.concatenate([np.zeros((n, 1)), np.random.rand(n, 1)], axis=1)
+    fig = plt.figure(figsize=(6, 6))
+
+    plt.scatter(random_data[:, 0], random_data[:, 1])
+    plt.plot([0, 0], [0, ratio], color='r', linestyle='-', linewidth=2)
+    plt.xlim((-0.5,0.5))
+    plt.ylabel('Random Dimension', fontsize=14)
+
+    plt.show()
+
+def plot_2d_random_data(ratio=0.5, n=30):
+    random_data = np.random.rand(n, 2)
+
+    fig = plt.figure(figsize=(6, 6))
+
+    plt.scatter(random_data[:, 0], random_data[:, 1])
+    plt.plot([ratio, 0], [0, 0], color='r', linestyle='-', linewidth=2)
+    plt.plot([0, 0], [ratio, 0], color='r', linestyle='-', linewidth=2)
+    plt.plot([0, ratio], [ratio, ratio], color='r', linestyle='-', linewidth=2)
+    plt.plot([ratio, ratio], [ratio, 0], color='r', linestyle='-', linewidth=2)
+
+    plt.xlabel('Random Dimension 1', fontsize=14)
+    plt.ylabel('Random Dimension 2', fontsize=14)
+
+    plt.show()
 
 print("Import done")

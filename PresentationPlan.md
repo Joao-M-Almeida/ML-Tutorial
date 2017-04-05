@@ -175,7 +175,7 @@ That's exactly what a machine learning algorithm does it uses the available data
 
 ## Logistic Regression:
 
-As you know naming things is one of the hardest problems in computer science and someone chose an awful name for this algorithm, because the Logistic Regression doesn't do Regression but classification.
+As you know naming things is one of the hardest problems in computer science and logistic regression has a very confusing name, because it is not a Regression algorithm but  classification.
 
 __Run the algorithm__
 
@@ -193,15 +193,36 @@ As you can see it draws a linear decision boundary where all examples in one sid
 
 ## Linear Regression and Logistic Regression
 
-The theory:
-
 ### Linear Regression
 
+The output is a Linear combination of the features
+
+Each feature has a weight, which can be positive or negative and the sum of all of the product between weights and features is the output of this model.
+
+There the w_0 is the offset and we create a 'feature' x_0 with a value 1 we get a vectorized version.
 
 #### How to find the Weights
 
+Now that we understand how the models makes the predictions, how do we fit the model to the data? how do the find the weights that minimize the error?
+
+Usually we use a method called Ordinary least squares where essentially we minimize the sum of the squared error for each datapoint.
+
+It's an optimization problem we want to find the weights that minimize the error over all the examples we have for training.
+
 
 ### Logistic Regression
+
+We want to use the same linear model  but now build a classifier.
+
+We want this classifier to go from a continuous value, the output of the linear regression, and go to a label.
+Today we will focus only in binary labels.
+
+For that we use the Logistic/Sigmoid function .
+
+It has some interesting properties:
+- monotonous
+- continuous
+- limited between 0 and 1
 
 
 #### Sigmoid Function
@@ -213,6 +234,7 @@ __plot sigmoid__
 
 Now that we have covered the basics of machine learning let's play with a real world dataset.
 ## Let's play with a real world dataset
+Let's take the knowledge we gained and try to apply it to a real world dataset.
 
 ## Look at Data
 
@@ -220,7 +242,18 @@ Now that we have covered the basics of machine learning let's play with a real w
 
 ## look at how they are related to each other
 
+
+# Small detour
+
+
 ## Overfitting
+
+### More features != Better data
+
+For instance let's imagine your trying to classify different types of fruit, do you think having more features would improve our model?
+For instance the name of the person that picked the fruit? Or his age? or whether they are vegetarian?
+In theory if you added these features the model should just ignore them. However to understand if it
+
 
 ## KNN
 
@@ -229,3 +262,8 @@ Now that we have covered the basics of machine learning let's play with a real w
 ## PCA
 
 ## Predicting Tobacco
+
+
+## Finishing remarks
+
+I've been lying to you, I've been hiding most of the problems you might face when working with machine learning. However the goal of this talk was to make you interested in it not to scare you away.
