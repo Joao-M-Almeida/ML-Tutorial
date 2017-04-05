@@ -34,14 +34,23 @@ The learning task can be varied:
 - Taking new examples and assigning labels to them, for instance taking a picture of a fruit and saying whether it is an apple or a banana.
 - Predicting the next value in a time series, for instance predicting stock prices.
 
+-------
+_4 min_
 
 ## Supervised vs Unsupervised Learning (1min)
 
 There are two distinct groups of ML applications, supervised learning and Unsupervised
 The distinction is whether you have data to teach what you are learning.
 
+
+
+
 ### Supervised:
 For instance when doing classification or regression you have data on what is supposed to be the output of your model for each example.
+
+
+__Classification vs Regression__
+Imagine you a program to help you trade stocks and make money from it. There are two possible ways of facing this problem, you can make a problem to predict the price of the stock each day or you can make a program that just tells you whether you shoul __buy__, __sell__ or __do nothing__ each day.
 
 ### Unsupervised Learning
 Clustering is the typical example, you have a bunch of data and want to try to extract some knowledge but you don't know exactly what.
@@ -59,17 +68,6 @@ Imagine you a program to help you trade stocks and make money from it. There are
 
 Unsupervised Learning is to try to learn something from data, but without having any labels -->
 
-## The data (20 s)
-
-A dataset is a set of examples used to train a Machine Learning model
-
-An example contains information about an object or event;
-
-The example is represented by its features.
-
-I think this is more understandable with examples.
-
-------
 
 ## Let's look at some code
 
@@ -101,6 +99,20 @@ Here I'm using Pandas, another very cool python library to take a look at the da
 
 We can see a few examples with their features and the price of each house.
 
+## The data (20 s)
+
+A dataset is a set of examples used to train a Machine Learning model
+
+An example contains information about an object or event;
+
+The example is represented by its features.
+
+I think this is more understandable with examples.
+## Let's see a real example:
+
+Show dataframe and explain what are features, examples and labels
+
+------
 
 One very important step when doing machine learning is to understand the data and how each relates to each other.
 
@@ -114,6 +126,9 @@ However all plotted features seem to be somewhat correlated with the price.
 ------
 
 ## Using Linear Regression:
+
+Who has heard of it? who has used it? maybe with Excel?
+
 
 ## Visualizing the resulting model:
 
