@@ -111,64 +111,75 @@ def plot_whisky_histograms(whisky_dataframe):
     ax11 = fig.add_subplot(3,4,11)
     ax12 = fig.add_subplot(3,4,12)
 
-    ax1.hist(x=whisky_dataframe['Smoky'], bins=range(0,5), rwidth=0.85, align='right')
+    ax1.hist(x=whisky_dataframe['Smoky'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax1.set_title("Smoky", fontsize=15)
-    ax1.set_xticks([0,1,2,3,4,5])
+    ax1.set_xticks([0,1,2,3,4])
     ax1.set_ylabel('Frequency')
 
-    ax2.hist(x=whisky_dataframe['Honey'], bins=range(0,5), rwidth=0.85, align='right')
+    ax2.hist(x=whisky_dataframe['Honey'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax2.set_title("Honey", fontsize=15)
     ax2.set_xticks([0,1,2,3,4])
+    ax2.set_xlim((-0.5,4.5))
     ax2.set_ylabel('Frequency')
 
-    ax3.hist(x=whisky_dataframe['Body'], bins=range(0,5), rwidth=0.85, align='right')
+    ax3.hist(x=whisky_dataframe['Body'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax3.set_title("Body", fontsize=15)
     ax3.set_xticks([0,1,2,3,4])
+    ax3.set_xlim((-0.5,4.5))
     ax3.set_ylabel('Frequency')
 
-    ax4.hist(x=whisky_dataframe['Nutty'], bins=range(0,5), rwidth=0.85, align='right')
+    ax4.hist(x=whisky_dataframe['Nutty'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax4.set_title("Nutty", fontsize=15)
     ax4.set_xticks([0,1,2,3,4])
+    ax4.set_xlim((-0.5,4.5))
     ax4.set_ylabel('Frequency')
 
-    ax5.hist(x=whisky_dataframe['Malty'], bins=range(0,5), rwidth=0.85, align='right')
+    ax5.hist(x=whisky_dataframe['Malty'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax5.set_title("Malty", fontsize=15)
     ax5.set_xticks([0,1,2,3,4])
+    ax5.set_xlim((-0.5,4.5))
     ax5.set_ylabel('Frequency')
 
-    ax6.hist(x=whisky_dataframe['Fruity'], bins=range(0,5), rwidth=0.85, align='right')
-    ax6.set_title("Smoky", fontsize=15)
+    ax6.hist(x=whisky_dataframe['Fruity'], bins=range(0,6,1), rwidth=0.85, align='left')
+    ax6.set_title("Fruity", fontsize=15)
     ax6.set_xticks([0,1,2,3,4])
+    ax6.set_xlim((-0.5,4.5))
     ax6.set_ylabel('Frequency')
 
-    ax7.hist(x=whisky_dataframe['Sweetness'], bins=range(0,5), rwidth=0.85, align='right')
+    ax7.hist(x=whisky_dataframe['Sweetness'], bins=range(0,5), rwidth=0.85, align='left')
     ax7.set_title("Sweetness", fontsize=15)
     ax7.set_xticks([0,1,2,3,4])
+    ax7.set_xlim((-0.5,4.5))
     ax7.set_ylabel('Frequency')
 
-    ax8.hist(x=whisky_dataframe['Medicinal'], bins=range(0,5), rwidth=0.85, align='right')
+    ax8.hist(x=whisky_dataframe['Medicinal'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax8.set_title("Medicinal", fontsize=15)
     ax8.set_xticks([0,1,2,3,4])
+    ax8.set_xlim((-0.5,4.5))
     ax8.set_ylabel('Frequency')
 
-    ax9.hist(x=whisky_dataframe['Tobacco'], bins=range(0,5), rwidth=0.85, align='right')
+    ax9.hist(x=whisky_dataframe['Tobacco'], bins=[0,1,2], rwidth=0.85, align='left')
     ax9.set_title("Tobacco", fontsize=15)
     ax9.set_xticks([0,1,2,3,4])
+    ax9.set_xlim((-0.5,4.5))
     ax9.set_ylabel('Frequency')
 
-    ax10.hist(x=whisky_dataframe['Spicy'], bins=range(0,5), rwidth=0.85, align='right')
+    ax10.hist(x=whisky_dataframe['Spicy'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax10.set_title("Spicy", fontsize=15)
     ax10.set_xticks([0,1,2,3,4])
+    ax10.set_xlim((-0.5,4.5))
     ax10.set_ylabel('Frequency')
 
-    ax11.hist(x=whisky_dataframe['Winey'], bins=range(0,5), rwidth=0.85, align='right')
+    ax11.hist(x=whisky_dataframe['Winey'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax11.set_title("Winey", fontsize=15)
     ax11.set_xticks([0,1,2,3,4])
+    ax11.set_xlim((-0.5,4.5))
     ax11.set_ylabel('Frequency')
 
-    ax12.hist(x=whisky_dataframe['Floral'], bins=range(0,5), rwidth=0.85, align='right')
+    ax12.hist(x=whisky_dataframe['Floral'], bins=range(0,6,1), rwidth=0.85, align='left')
     ax12.set_title("Floral", fontsize=15)
     ax12.set_xticks([0,1,2,3,4])
+    ax12.set_xlim((-0.5,4.5))
     ax12.set_ylabel('Frequency')
 
     plt.show()
@@ -242,9 +253,10 @@ def plot_whiky_body_correlation(whisky_dataframe):
     plt.show()
 
 def print_cm(cm):
-    print("{0:10} |  {1:10} | {2:10} ".format("        ", "No Tobacco", "Tobacco"))
-    print("{0:10} |  {1:5}      | {2:5} ".format("No Tobacco", cm[0,0], cm[0,1]))
-    print("{0:10} |  {1:5}      | {2:5} ".format("Tobacco", cm[1,0], cm[1,1]))
+    print("{0:12} |  {1:20} ".format("Real Values", "Predicted Values"))
+    print("{0:12} |  {1:10} | {2:10} ".format("        ", "No Tobacco", "Tobacco"))
+    print("{0:12} |  {1:5}      | {2:5} ".format("No Tobacco", cm[0,0], cm[0,1]))
+    print("{0:12} |  {1:5}      | {2:5} ".format("Tobacco", cm[1,0], cm[1,1]))
 
 
 def plot_1d_random_data(ratio=0.5, n=30):
@@ -254,7 +266,7 @@ def plot_1d_random_data(ratio=0.5, n=30):
     plt.scatter(random_data[:, 0], random_data[:, 1])
     plt.plot([0, 0], [0, ratio], color='r', linestyle='-', linewidth=2)
     plt.xlim((-0.5,0.5))
-    plt.ylabel('Random Dimension', fontsize=14)
+    plt.ylabel('Dimension', fontsize=14)
 
     plt.show()
 
@@ -269,8 +281,8 @@ def plot_2d_random_data(ratio=0.5, n=30):
     plt.plot([0, ratio], [ratio, ratio], color='r', linestyle='-', linewidth=2)
     plt.plot([ratio, ratio], [ratio, 0], color='r', linestyle='-', linewidth=2)
 
-    plt.xlabel('Random Dimension 1', fontsize=14)
-    plt.ylabel('Random Dimension 2', fontsize=14)
+    plt.xlabel('Dimension 1', fontsize=14)
+    plt.ylabel('Dimension 2', fontsize=14)
 
     plt.show()
 

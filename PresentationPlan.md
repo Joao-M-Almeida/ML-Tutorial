@@ -11,7 +11,7 @@ I took a few courses in college, attended some talks, read a lot, did a few proj
 
 There won't be any slides, I am going to show you a lot of code, some math and some plots.
 
-We won't focus on the theoretical details behind the ML techiniques, but on their intuition and on how to apply them. We will do this with the help of Python and Scikit Learn, a very nice python ML library.
+We won't focus on the theoretical details behind the ML techniques, but on their intuition and on how to apply them. We will do this with the help of Python and Scikit Learn, a very nice python ML library.
 
 
  <!-- but i’ve got rid of as much maths as possible and put in lots of pictures.
@@ -49,8 +49,8 @@ The distinction is whether you have data to teach what you are learning.
 For instance when doing classification or regression you have data on what is supposed to be the output of your model for each example.
 
 
-__Classification vs Regression__
-Imagine you a program to help you trade stocks and make money from it. There are two possible ways of facing this problem, you can make a problem to predict the price of the stock each day or you can make a program that just tells you whether you shoul __buy__, __sell__ or __do nothing__ each day.
+<!-- __Classification vs Regression__
+Imagine you a program to help you trade stocks and make money from it. There are two possible ways of facing this problem, you can make a problem to predict the price of the stock each day or you can make a program that just tells you whether you shoul __buy__, __sell__ or __do nothing__ each day. -->
 
 ### Unsupervised Learning
 Clustering is the typical example, you have a bunch of data and want to try to extract some knowledge but you don't know exactly what.
@@ -68,7 +68,9 @@ Imagine you a program to help you trade stocks and make money from it. There are
 
 Unsupervised Learning is to try to learn something from data, but without having any labels -->
 
-
+------
+ 4 min
+-------
 ## Let's look at some code
 
 ### The Jupyter Notebook (1 min)
@@ -125,6 +127,10 @@ However all plotted features seem to be somewhat correlated with the price.
 
 ------
 
+__Until here 10 min__
+
+----------
+
 ## Using Linear Regression:
 
 Who has heard of it? who has used it? maybe with Excel?
@@ -138,6 +144,11 @@ We can also look at some examples and see how the model is performing.
 
 Now let's look at a classification task before delving into how linear regression works.
 
+------
+
+__Until here ~ 13-15 min__
+
+----------
 ## The Iris dataset (1 min)
 
 This is a very common classification dataset, it's small and so is available inside scikit learn.
@@ -175,7 +186,8 @@ That's exactly what a machine learning algorithm does it uses the available data
 
 ## Logistic Regression:
 
-As you know naming things is one of the hardest problems in computer science and logistic regression has a very confusing name, because it is not a Regression algorithm but  classification.
+It's called logistic regression but it is used for classification, there is a reason behind this, but it's a long story. In short naming things in Computer Science is hard
+
 
 __Run the algorithm__
 
@@ -242,11 +254,15 @@ Let's take the knowledge we gained and try to apply it to a real world dataset.
 
 ## look at how they are related to each other
 
+__First Look at Scotch data: 5 min__
+
+--------
+TODO how to connect this?s
 
 # Small detour
 
 
-## Overfitting
+## Curse of Dimensionality
 
 ### More features != Better data
 
@@ -254,16 +270,64 @@ For instance let's imagine your trying to classify different types of fruit, do 
 For instance the name of the person that picked the fruit? Or his age? or whether they are vegetarian?
 In theory if you added these features the model should just ignore them. However to understand if it
 
+__Curse of Dimensionality: 3 min__
 
-## KNN
+--------
 
-## Curse of Dimensionality
 
-## PCA
+## Feature Selection and Extraction
 
+### PCA
+ eigenvectors of covariance matrix
+
+Principal components are the directions of largest variance
+
+The eigenvectors with the largest eigenvalues are the principal components
+
+
+__Model Complexity: 3 min__
+
+------
+### Model Complexity
+
+
+
+__Model Complexity: 2 min__
+
+--------
+## Back to Scotch
+
+### PCA to Scotch
+
+
+__PCA to Scotch: 1 min__
+
+--------
 ## Predicting Tobacco
 
 
+#### Confusion Matrices
+
+__Predicting Tobacco: 5 min__
+
+--------
+###  Cross validation
+
+__Cross validation: 2 min__
+
+--------
 ## Finishing remarks
 
 I've been lying to you, I've been hiding most of the problems you might face when working with machine learning. However the goal of this talk was to make you interested in it not to scare you away.
+
+
+__THE END__
+-------
+## Overfitting
+
+## KNN
+it does not attempt to construct a general internal model, but simply stores instances of the training data.
+Classification is computed from a simple majority vote of the nearest neighbors of each point: a query point is assigned the data class which has the most representatives within the nearest neighbors of the point.
+
+ 3 min
+-------
