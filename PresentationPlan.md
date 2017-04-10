@@ -276,20 +276,55 @@ __Curse of Dimensionality: 3 min__
 
 
 ## Feature Selection and Extraction
+__Feature selection__: throwing away the features with less useful information.
+
+There are techniques to this in an automated way, but we can essentially inspect the data and select the features that have a stronger correlation with what we are trying to predict.
+
+__Feature Extraction__ This however is not optimal, even features with a weak correlation might have useful information for our model.
+So there are these techniques that combine the features into new ones. In practice transforming the data into a lower dimension while maintaining most of the information of the data..
 
 ### PCA
- eigenvectors of covariance matrix
-
 Principal components are the directions of largest variance
 
-The eigenvectors with the largest eigenvalues are the principal components
+The Eigenvectors of covariance matrix with the largest eigenvalues are the principal components
 
+##### code:
+two classes and it seems easy to draw a line between them
 
-__Model Complexity: 3 min__
+also I ploted the PC of the data, the directions where it varies the most.
+
+If we apply PCA and keep the same amount of features we are in fact just performing a rotation.
+
+however if we reduce what in fact we are doing is project the data to the lower dimensional space.
+
+resulting in this plot where as you can see most of the information was maintained and we can still draw the line that separates the classes.
+
+__PCA: 3 min__
 
 ------
 ### Model Complexity
 
+There is another problem that we might face when working with high dimensionality datasets, which is that we will have a more complex model and in turn have a higher chance of suffering from Overfitting.
+
+Overfitting is what happens when your model instead of learning the system that produces your data learns the noise in your data.
+
+This causes the model to perform worst than expected when testing in new data.
+
+Let's try to visualize why a complex model leads to Overfitting.
+##### code:
+
+Imagine we want to model a sinusoidal function, we take some samples from this function and try to fit a polynomial to it.
+
+Looking at the code,  
+
+- we have here the function we want to model
+- we sample it
+- And then fit 4 different polynomials with 1, 3, 6 and 10 degrees
+
+Looking at the resulting plots we can see that
+- the 2 first polynomials are not flexible enough to model the system, this is called being underfit
+- The 6 degree polynomial is not perfect, but I would say it fits the model pretty well in the spaces we have data.
+- The 10 degree polynomial on the other hand, despite being the one that passes closer to the data points it  clearly is very far away from the system we are modeling.
 
 
 __Model Complexity: 2 min__
@@ -298,13 +333,18 @@ __Model Complexity: 2 min__
 ## Back to Scotch
 
 ### PCA to Scotch
+Applying PCA to scotch we are able to reduce the dimensionality from 11 features only to 2 features
 
+We can see that we can still maintain 50 % of the variance just in 2 PC.
+
+And we can now plot the data and visualize it.
 
 __PCA to Scotch: 1 min__
 
 --------
 ## Predicting Tobacco
 
+### Unbalanced dataset
 
 #### Confusion Matrices
 
@@ -321,7 +361,27 @@ __Cross validation: 2 min__
 I've been lying to you, I've been hiding most of the problems you might face when working with machine learning. However the goal of this talk was to make you interested in it not to scare you away.
 
 
-__THE END__
+# __THE END__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -------
 ## Overfitting
 
