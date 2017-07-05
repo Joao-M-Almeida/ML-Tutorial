@@ -3,7 +3,7 @@
 Repository with the presentation "Introduction to Machine Learning with Python and Scikit Learn" to be given at CERN Spring Campus 2017 in Glasgow.
 
 
-Install python3:
+Install python3 and virtualenv, then:
 
     python3 -m venv MLTutorial
     source bin/activate
