@@ -6,30 +6,12 @@ Repository with the presentation "Introduction to Machine Learning with Python 
 Install python3 and virtualenv, then:
 
     python3 -m venv MLTutorial
-    source bin/activate
-    pip install ipykernel
-    pip install nose
-    pip install numpy
-    pip install scipy
-    pip install matplotlib
-    pip install scikit-learn
-    nosetests -v sklearn
-    pip install pandas
+    source MLTutorial/bin/activate
+    pip install -r requirements.txt
 
 References:
 - http://docs.python-guide.org/en/latest/dev/virtualenvs/
 - http://help.pythonanywhere.com/pages/IPythonNotebookVirtualenvs
-
-
-Main dependencies:
-- Python 3
-- NumPy
-- SciPy
-- scikit-learn
-- matplotlib
-- pandas
-- nose (for testing scikit-learn)
-
 
 Whisky Datasets:
 - [David Whishart: Whisky Classified dataset](https://www.mathstat.strath.ac.uk/outreach/nessie/nessie_whisky.html)
